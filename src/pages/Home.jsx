@@ -13,7 +13,9 @@ export const Home = () => {
       </div>
 
     <aside>
-        <div></div>
+        <div>
+          <h2>Top News</h2>
+        </div>
     </aside>
 
     </div>

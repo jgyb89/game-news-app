@@ -1,5 +1,5 @@
 @use "../styles/variables";
-@use "../styles/globals";
+
 
 aside {
     display: flex;
@@ -16,14 +16,19 @@ aside {
     @media (max-width: 1200px) {
        display: none;
     }
+
+    h2{
+        color: #fff;
+        padding: 0 20px;
+    }
 }
 
 .main-container {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     margin: auto;
-    width: 800px;
     min-width: 800px;
     background-color: #fff;
+    width: 500px;
 }
