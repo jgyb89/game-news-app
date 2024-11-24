@@ -20,7 +20,7 @@
 .logo img {
     display: flex;
     justify-content: flex-start;
-    padding: 1rem;
+    padding: 10px;
     margin-bottom: 20px;
     width: 200px;
     height: auto;
@@ -61,8 +61,6 @@
         }
 
     }
-
-    
 
     .nav-text {
         color: #fff;
@@ -141,7 +139,7 @@
 
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 625px) {
         display: none;
     }
 }
@@ -163,7 +161,7 @@
 
 }
 
-@media (max-width: 1200px) and (min-width: 768px) {
+@media (max-width: 1200px) and (min-width: 625px) {
     .logo img {
         padding: 0.25rem;
         width: 40px;
@@ -173,7 +171,7 @@
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 625px) {
     .logo img {
         display: none;
     }

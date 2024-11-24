@@ -11,12 +11,16 @@ import Settings from './pages/Settings';
 import Search from './pages/Search';
 import News from './pages/News';
 import LoginRegister from './pages/LoginRegister';
+import Topbar from './components/shared/Topbar';
+import Bottombar from './components/shared/Bottombar';
 
 
 function App() {
     return (
         <Router>
+            <Topbar />
             <LeftSidebar />
+            <Bottombar />
             <main>
                 <Routes>
                     <Route path="/login" element={<LoginRegister/>} />

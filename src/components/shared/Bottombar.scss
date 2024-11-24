@@ -1,0 +1,58 @@
+@use "../../styles/variables";
+@use "../../styles/globals";
+
+.bottombar {
+    display: none;
+}
+
+
+@media (max-width: 625px) {
+
+.bottombar {
+    display: block;
+    position: fixed; /* Fix it to the viewport */
+    bottom: 0; /* Align it to the bottom */
+    left: 0; /* Start at the left edge */
+    width: 100%; /* Ensure it spans the entire viewport width */
+    background: variables.$gradient-bg;
+    padding: 1rem 1.25rem;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    z-index: 1000; /* Place it above other content */
+  
+    .bottombar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .logo-link {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+  
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+  
+      .profile-container {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+  
+        .profile-link {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+  
+          img {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            border-radius: 50%; /* Optional, for circular profile images */
+          }
+        }
+      }
+    }
+  }
+  
+}

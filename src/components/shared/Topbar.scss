@@ -1,0 +1,60 @@
+@use "../../styles/variables";
+@use "../../styles/globals";
+
+.topbar {
+    display: none;
+}
+
+
+@media (max-width: 625px) {
+
+.topbar {
+    display: block;
+    background: variables.$gradient-bg;
+    padding: 1rem 1.25rem;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    z-index: 1000; /* Place it above other content */
+
+    .icon-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+  
+    .topbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .logo-link {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+  
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+  
+      .profile-container {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+  
+        .profile-link {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+  
+          img {
+            width: 40px; /* Adjust as needed */
+            height: 40px; /* Adjust as needed */
+            border-radius: 50%; /* Optional, for circular profile images */
+          }
+        }
+      }
+    }
+  }
+  
+}
