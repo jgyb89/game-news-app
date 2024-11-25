@@ -1,78 +1,7 @@
 @use "../../styles/variables";
 @use "../../styles/globals";
 
-.sidenav-nav {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-
-    .nav-item {
-        display: flex;
-        align-items: center;
-        padding: 10px 20px;
-    }
-}
-
-.clickable {
-    cursor: pointer;
-}
-
-.logo img {
-    display: flex;
-    justify-content: flex-start;
-    padding: 10px;
-    margin-bottom: 20px;
-    width: 200px;
-    height: auto;
-    max-width: 100%;
-    transition: all 0.3s ease;
-}
-
-.custom-sidenav-container {
-    position: absolute;
-    right: 20px;
-
-    .nav-link {
-        display: block;
-        width: 200px;
-        align-items: center;
-        padding: 10px;
-
-        &:hover {
-            background-color: variables.$primary-color;
-            border-radius: 10px;
-            
-        }
-    }
-
-    .nav-icon {
-        font-size: 1.65rem;
-        color: #fff;
-        opacity: 1;
-
-        img {
-            width: 1.7rem;
-            margin-top: 13px;
-        }
-
-        .profile {
-            width: 2.2rem;
-            margin-top: 8px;
-        }
-
-    }
-
-    .nav-text {
-        color: #fff;
-        display: inline;
-        margin-left: 5px;
-        font-size: 1rem;
-    }
-
-}
-
-
-/* Sidebar Styles */
+/* Sidebar-specific styles */
 .custom-sidenav {
     position: fixed;
     left: 0;
@@ -84,95 +13,28 @@
 
     @media (max-width: 1200px) {
         width: 64px;
+    
 
-        .logo img {
-            content: url('../../assets/gamenews-logo-condensed.svg');
-            display: flex;
-            justify-content: center;
-            margin: auto;
-            height: 32px;
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-
-        .sidenav---sidenav-nav---3tvij > .sidenav---sidenav-navitem---uwIJ- > .sidenav---navitem---9uL5T .sidenav---navicon---3gCRo {
-            width: 100%;
-        }
-
-        .custom-sidenav-container {
-            position: relative; // Prevent absolute positioning
-            right: 0; // Reset the right offset
-            display: flex;
-            flex-direction: column; // Ensure items stack vertically
-            align-items: flex-start; // Align items to the left
-
-        }
-
-        .nav-link {
-                display: block;
-                width: 100%;
-                align-items: center;
-                text-align: left;
-                justify-self: flex-start;
-                padding: 10px;
-
-                &:hover {
-                    background-color: variables.$primary-color;
-                    border-radius: 10px;
-                }
-
-                .nav-icon {
-                    display: flex;
-                    align-items: center;
-                    align-content: center;
-                    justify-content: center;
-                    margin: auto;
-                    height: 32px;
-                    margin-top: 10px;
-                    margin-bottom: 20px;
-                }
-            }
-
-        .nav-text {
-            display: none;
-        }
-
+    .logo img {
+        content: url('../../assets/gamenews-logo-condensed.svg');
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        height: 32px;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
+}
 
     @media (max-width: 625px) {
         display: none;
     }
 }
 
-/* Responsive Logo Styles */
-@media (min-width: 1200px) {
-    .logo img {
-        height: 60px;
-    }
-
-
-    .nav-item {
-        display: flex;
-        align-items: center;
-        padding: 0px;
-        width: 64px;
-
-    }
-
-}
-
-@media (max-width: 1200px) and (min-width: 625px) {
-    .logo img {
-        padding: 0.25rem;
-        width: 40px;
-        height: auto;
-    }
-
-
-}
-
-@media (max-width: 625px) {
-    .logo img {
-        display: none;
+.custom-sidenav-container {
+    .nav-link {
+        &:hover {
+            background-color: variables.$primary-color;
+        }
     }
 }

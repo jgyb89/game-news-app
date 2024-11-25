@@ -11,8 +11,9 @@ import Settings from './pages/Settings';
 import Search from './pages/Search';
 import News from './pages/News';
 import LoginRegister from './pages/LoginRegister';
-import Topbar from './components/shared/Topbar';
+
 import Bottombar from './components/shared/Bottombar';
+import Topbar from './components/shared/Topbar';
 
 
 function App() {
