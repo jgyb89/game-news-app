@@ -30,7 +30,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: variables.$primary-color;
+    background-color: #000;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     padding: 10px;
@@ -49,6 +50,7 @@
 
     &.control-prev-btn:hover {
       opacity: 100%;
+      background-color: variables.$primary-color;
     }
 
     &.control-next-btn {
@@ -59,6 +61,7 @@
 
     &.control-next-btn:hover {
       opacity: 100%;
+      background-color: variables.$primary-color;
     }
 
     &.hidden {
