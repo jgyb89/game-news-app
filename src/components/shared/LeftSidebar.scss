@@ -2,17 +2,27 @@
 @use "../../styles/globals";
 
 /* Sidebar-specific styles */
+
+.logo img {
+    display: flex;
+    justify-content: center;
+    height: 25spx;
+    margin: 10px;
+}
+
 .custom-sidenav {
     position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
     width: 200px;
+    padding: 20px 10px;
     background: variables.$gradient-bg;
     transition: width 0.3s ease;
 
     @media (max-width: 1200px) {
         width: 64px;
+        padding: 0px;
     
 
     .logo img {
@@ -20,8 +30,8 @@
         display: flex;
         justify-content: center;
         margin: auto;
-        height: 32px;
-        margin-top: 10px;
+        height: 25spx;
+        margin-top: 20px;
         margin-bottom: 20px;
     }
 }
@@ -35,6 +45,8 @@
     .nav-link {
         &:hover {
             background-color: variables.$primary-color;
+            border-radius: 5px;
+            width: 100%;
         }
     }
 }
