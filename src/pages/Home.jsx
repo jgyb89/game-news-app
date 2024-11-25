@@ -1,26 +1,22 @@
-import './Home.scss'
+import React from "react";
+import TopSlider from "../components/ui/TopSlider";
+import { sliderImages } from "../components/ui/SliderIndex";
+import "./Home.scss";
 
 export const Home = () => {
   return (
-    <div className=".main-container">
-
-      <div>
-        <h1>Home</h1>
+    <div>
+      <TopSlider defaultImages={sliderImages} />
+      <div className="main-container">
+        <div className="content"></div>
       </div>
-
-      <div>
-        <p>Test area</p>
-      </div>
-
-    <aside>
+      <aside>
         <div>
           <h2>Top News</h2>
         </div>
-    </aside>
-
+      </aside>
     </div>
-  )
-}
-
+  );
+};
 
 export default Home;

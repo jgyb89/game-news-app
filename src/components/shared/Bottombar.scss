@@ -11,7 +11,7 @@
     left: 0; /* Start at the left edge */
     width: 100%; /* Ensure it spans the entire viewport width */
     background: variables.$gradient-bg;
-    padding: 1rem 1.25rem;
+    padding: 1rem 2rem;
     box-sizing: border-box; /* Ensure padding doesn’t affect width */
     z-index: 1000; /* Place it above other content */
 
@@ -19,7 +19,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
 
     }
   }

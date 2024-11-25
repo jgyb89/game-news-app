@@ -1,3 +1,50 @@
+
 @use "../../styles/variables";
 @use "../../styles/globals";
 
+.wrapper {
+  display: flex;
+  max-width: 1200px;
+  position: relative;
+
+  .carousel {
+    font-size: 0;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+
+    &.dragging {
+      cursor: grab;
+      scroll-behavior: auto;
+
+      img {
+        pointer-events: none;
+      }
+    }
+
+    img {
+      height: 340px;
+      object-fit: cover;
+      user-select: none;
+      margin-left: 14px;
+      width: calc(100% / 3);
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel img {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .wrapper .carousel img {
+    width: 100%;
+  }
+}

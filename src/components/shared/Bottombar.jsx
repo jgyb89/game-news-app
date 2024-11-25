@@ -4,7 +4,7 @@ import './Bottombar.scss';
 
 const Bottombar = () => {
   const bottomNavItems = navItems.filter(
-    item => !["/notifications", "/messages"].includes(item.eventKey)
+    item => !["/notifications", "/messages", "/settings"].includes(item.eventKey)
   );
 
   return (
@@ -19,11 +19,7 @@ const Bottombar = () => {
             )}
           </Link>
         ))}
-        <div className="profile">
-          <Link to="/profile">
-            <img src="/path-to-profile-image.webp" alt="Profile" />
-          </Link>
-        </div>
+        
       </div>
     </section>
   );
