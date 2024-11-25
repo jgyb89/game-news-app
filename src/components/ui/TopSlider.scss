@@ -1,50 +1,133 @@
-
 @use "../../styles/variables";
 @use "../../styles/globals";
 
 .wrapper {
   display: flex;
-  max-width: 1200px;
+  justify-content: flex-start;
+  align-items: flex-start;
   position: relative;
+  max-width: 100%;
+  margin: 0 275px 0 245px;
+  height: 140px;
+  padding: 10px 0;
 
   .carousel {
-    font-size: 0;
-    cursor: pointer;
+    display: flex;
     overflow: hidden;
-    white-space: nowrap;
     scroll-behavior: smooth;
-
-    &.dragging {
-      cursor: grab;
-      scroll-behavior: auto;
-
-      img {
-        pointer-events: none;
-      }
-    }
+    width: 100%;
 
     img {
-      height: 340px;
+      height: 120px;
+      margin: 10px;
+      border-radius: 10px;
       object-fit: cover;
-      user-select: none;
-      margin-left: 14px;
-      width: calc(100% / 3);
+    }
 
-      &:first-child {
-        margin-left: 0;
+  }
+
+  .control-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: variables.$primary-color;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    color: #fff;
+
+    &.control-prev-btn {
+      left: 10px;
+      z-index: 100;
+      opacity: 70%;
+    }
+
+    &.control-prev-btn:hover {
+      opacity: 100%;
+    }
+
+    &.control-next-btn {
+      right: 10px;
+      z-index: 100;
+      opacity: 70%;
+    }
+
+    &.control-next-btn:hover {
+      opacity: 100%;
+    }
+
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    margin-left: 64px;
+    margin-right: 0;
+
+    .carousel {
+      width: 100%;
+    }
+
+    .control-btn {
+      position: absolute;
+
+      &.control-prev-btn {
+        left: 15px;
+        z-index: 100;
+      }
+
+      &.control-next-btn {
+        right: 15px;
+        z-index: 100;
+      }
+
+      &.hidden {
+        visibility: hidden;
       }
     }
   }
 }
 
-@media screen and (max-width: 900px) {
-  .wrapper .carousel img {
-    width: calc(100% / 2);
-  }
-}
+@media (max-width: 625px) {
+  .wrapper {
+    margin-left: 0px;
+    height: 100px;
 
-@media screen and (max-width: 550px) {
-  .wrapper .carousel img {
-    width: 100%;
+    .carousel {
+      width: 100%;
+  
+      img {
+        height: 100px;
+        margin: 0 10px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+    }
+
+    .control-btn {
+      position: absolute;
+
+      &.control-prev-btn {
+        left: 15px;
+        z-index: 100;
+      }
+
+      &.control-next-btn {
+        right: 15px;
+        z-index: 100;
+      }
+
+      &.hidden {
+        visibility: hidden;
+      }
+    }
   }
 }
