@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import GamenewsLogo from '../../assets/gamenews-logo.svg';
-import { navItems } from '../../navItems'; // Import navigation items
+import { navItems } from './navItems'; // Import navigation items
 import './Topbar.scss';
 
 const Topbar = () => {

@@ -4,7 +4,7 @@ import './LeftSidebar.scss'; // Import custom styles
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import GamenewsLogo from '../../assets/gamenews-logo.svg';
-import { navItems } from '../../navItems'
+import { navItems } from './navItems'
 
 const LeftSidebar = () => {
     const navigate = useNavigate();
@@ -46,7 +46,7 @@ const LeftSidebar = () => {
                 <img src={GamenewsLogo} alt="Game News Logo" />
               </div>
               {navItems.map((item) => (
-                <NavItem
+                <NavItem 
                   key={item.eventKey}
                   eventKey={item.eventKey}
                   onClick={() => navigate(item.eventKey)}
@@ -64,7 +64,9 @@ const LeftSidebar = () => {
                     )}
                   </NavIcon>
                   <NavText>
+                    
                     <p className="nav-text">{item.text}</p>
+                    
                   </NavText>
                 </NavItem>
               ))}

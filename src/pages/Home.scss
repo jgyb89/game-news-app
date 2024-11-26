@@ -1,7 +1,6 @@
 @use "../styles/variables";
 @use "../styles/globals";
 
-
 aside {
     display: flex;
     flex: 2;
@@ -30,8 +29,7 @@ aside {
     align-items: center;
     margin: auto;
     min-width: 800px;
-    background-color: #fff;
-    width: 500px;
+    width: 800px;
 
     @media (max-width: 1200px) {
         display: flex;
@@ -43,14 +41,5 @@ aside {
         box-sizing: border-box;
         padding: 10px;
      }
-}
-
-.content {
-    max-width: 600px;
-    max-height: 600px;
-    width: 100%;
-    height: auto;
-    padding: 0px 0px 10px 0px;
-    background-color: red;
 }
 

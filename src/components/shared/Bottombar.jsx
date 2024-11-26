@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { navItems } from '../../navItems';
+import { navItems } from './navItems';
 import './Bottombar.scss';
 
 const Bottombar = () => {

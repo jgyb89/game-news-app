@@ -1,0 +1,53 @@
+@use "../../styles/variables";
+@use "../../styles/globals";
+
+.post {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    .post-image {
+      border-radius: 10px;
+      width: 400px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .post-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      .post-interact{
+        background-color: none;
+      }
+
+      button {
+        flex: 1;
+        font-size: 20px;
+        margin-right: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        
+        img{
+          width: 18px;
+        }
+  
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  
+  .post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+  }
+
+  .user-details{
+    display: flex;
+    gap: 20px;
+  }
