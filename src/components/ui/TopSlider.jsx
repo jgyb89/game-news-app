@@ -15,16 +15,16 @@ const TopSlider = ({ defaultImages = [], altTexts = [] }) => {
   // It scrolls the slider to the right by 270px and updates the scroll position state.
   const handleNext = () => {
     const slider = sliderRef.current; // Access the DOM element using the ref.
-    slider.scrollLeft += 270; // Increment the scrollLeft property to move right.
-    setScrollPosition(slider.scrollLeft + 270); // Update the state with the new scroll position.
+    slider.scrollLeft += 240; // Increment the scrollLeft property to move right.
+    setScrollPosition(slider.scrollLeft + 240); // Update the state with the new scroll position.
   };
 
   // Function to handle the "Previous" button click event.
   // It scrolls the slider to the left by 270px and updates the scroll position state.
   const handlePrev = () => {
     const slider = sliderRef.current;
-    slider.scrollLeft -= 270; // Decrement the scrollLeft property to move left.
-    setScrollPosition(slider.scrollLeft - 270); // Update the state with the new scroll position.
+    slider.scrollLeft -= 240; // Decrement the scrollLeft property to move left.
+    setScrollPosition(slider.scrollLeft - 240); // Update the state with the new scroll position.
   };
 
   // useEffect sets up an event listener for the slider's scroll event to dynamically update the scroll position.
