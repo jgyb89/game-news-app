@@ -1,0 +1,44 @@
+
+.discover-content {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    
+
+    .discover-card {
+        box-sizing: border-box;
+        /* Include padding and border in width/height */
+        padding: 8px;
+
+        text-align: center;
+
+        width: 100%;
+
+        .discover-image {
+            border-radius: 10px;
+            object-fit: cover;
+            width: 100%;
+            max-width: 300px;
+            min-height: 300px;
+        }
+
+    }
+
+}
+
+.discover-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 248px;
+    margin-top: 20px;
+    
+    @media (max-width: 1200px){
+        margin-left: 64px;
+    }
+
+    @media (max-width: 750px){
+        margin-left: 0;
+    }
+
+}
+

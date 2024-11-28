@@ -1,9 +1,11 @@
-import React from 'react'
+// Search.jsx
+import React from 'react';
 
 const Search = () => {
+  
   return (
-    <div>Search</div>
-  )
-}
+   <div>Test</div>
+  );
+};
 
-export default Search
+export default Search;

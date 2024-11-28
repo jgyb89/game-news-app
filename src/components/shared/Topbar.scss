@@ -4,7 +4,7 @@
 .topbar {
   display: none;
 
-  @media (max-width: 625px) {
+  @media (max-width: 750px) {
     display: block;
     background: variables.$gradient-bg;
     padding: 1rem 1.25rem;

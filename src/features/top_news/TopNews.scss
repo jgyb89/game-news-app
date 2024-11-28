@@ -1,0 +1,34 @@
+@use "../../styles/variables";
+@use "../../styles/globals";
+
+.top-news{
+    img {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    h3{
+        margin-top: 0px;
+    }
+
+}
+
+aside {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: 200px;
+    padding: 10px;
+    max-width: 250px;
+    margin-right: 40px;
+    padding-left: 40px;
+    transition: width 0.3s;
+
+    @media (max-width: 1350px) {
+       display: none;
+    }
+
+}

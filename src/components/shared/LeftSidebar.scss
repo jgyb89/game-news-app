@@ -6,7 +6,7 @@
 .logo img {
     display: flex;
     justify-content: center;
-    height: 25spx;
+    height: 25px;
     margin: 10px;
     margin-left: 10px;
 }
@@ -41,7 +41,7 @@
     }
 }
 
-    @media (max-width: 625px) {
+    @media (max-width: 750px) {
         display: none;
     }
 }

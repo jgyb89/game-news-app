@@ -6,26 +6,28 @@ import Groups from './pages/Groups';
 import Notifications from './pages/Notifications';
 import Messages from './pages/Messages';
 import Profile from './pages/Profile';
-import Discover from './pages/Discover';
+import Discover from './pages/discover/Discover';
 import Settings from './pages/Settings';
-import Search from './pages/Search';
 import News from './pages/News';
 import LoginRegister from './pages/LoginRegister';
-
 import Bottombar from './components/shared/Bottombar';
 import Topbar from './components/shared/Topbar';
+import Search from './pages/Search';
+
 
 
 function App() {
     return (
+        <div>
         <Router>
+            
             <Topbar />
             <LeftSidebar />
             <Bottombar />
             <main>
+            <Search />
                 <Routes>
                     <Route path="/login" element={<LoginRegister/>} />
-                    <Route path="/search" element={<Search />} />
                     <Route path="/news" element={<News />} />
                     <Route path="/notifications" element={<Notifications />} />
                     <Route path="/discover" element={<Discover />} />
@@ -40,6 +42,8 @@ function App() {
                 </Routes>
             </main>
         </Router>
+
+        </div>
     );
 }
 
