@@ -1,0 +1,27 @@
+@use "../../styles/variables";
+@use "../../styles/globals";
+
+.search-container {
+    margin: 0 15px;
+}
+
+  .search-bar {
+    display: block;
+    border: 1px solid #fff;
+    width: 100%;
+    padding: 0 10px;
+    color: #fff;
+    border-radius: 50px;
+    margin-bottom: 50px;
+
+    p {
+        margin: 10px 20px;
+    }
+  }
+  
+  .hidden {
+    display: none; /* Hides the element completely */
+  }
+
+ 
+  

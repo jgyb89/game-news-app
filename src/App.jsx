@@ -12,15 +12,12 @@ import News from './pages/News';
 import LoginRegister from './pages/LoginRegister';
 import Bottombar from './components/shared/Bottombar';
 import Topbar from './components/shared/Topbar';
-import Search from './pages/Search';
-
-
+import Search from './features/search/Search';
 
 function App() {
     return (
         <div>
         <Router>
-            
             <Topbar />
             <LeftSidebar />
             <Bottombar />
@@ -42,7 +39,6 @@ function App() {
                 </Routes>
             </main>
         </Router>
-
         </div>
     );
 }

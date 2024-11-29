@@ -20,6 +20,7 @@
     padding: 20px 10px;
     background: variables.$gradient-bg;
     transition: width 0.3s ease;
+    z-index: 10;
 
     .nav-link {
         top: 30px;
@@ -55,4 +56,5 @@
         }
     }
 }
+
 

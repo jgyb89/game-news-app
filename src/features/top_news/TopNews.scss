@@ -22,12 +22,12 @@ aside {
     bottom: 0;
     margin-top: 200px;
     padding: 10px;
-    max-width: 250px;
+    max-width: 300px;
     margin-right: 40px;
     padding-left: 40px;
     transition: width 0.3s;
 
-    @media (max-width: 1350px) {
+    @media (max-width: 1450px) {
        display: none;
     }
 

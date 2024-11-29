@@ -7,6 +7,10 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
 
+  hr {
+    margin-top: 50px;
+  }
+
   .post-image {
     border-radius: 10px;
     max-width: 600px;
@@ -93,10 +97,6 @@
 
 .post-desc {
   color: #fff;
-}
-
-hr {
-  margin-top: 50px;
 }
 
 @media (max-width: 450px) {

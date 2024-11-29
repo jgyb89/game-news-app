@@ -10,7 +10,9 @@ const DiscoverList = () => {
           key={discover.id}
           image={discover.image}
         />
+        
       ))}
+      
     </div>
   );
 };

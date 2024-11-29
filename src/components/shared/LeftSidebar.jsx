@@ -1,16 +1,17 @@
-import SideNav, { NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
-import '@trendmicro/react-sidenav/dist/react-sidenav.css';
-import './LeftSidebar.scss'; // Import custom styles
-import { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { useModal } from '../../ModalContext'; // Import modal context
-import GamenewsLogo from '../../assets/gamenews-logo.svg';
-import { navItems } from './navItems';
+import React from "react";
+import SideNav, { NavItem, NavIcon, NavText } from "@trendmicro/react-sidenav";
+import "@trendmicro/react-sidenav/dist/react-sidenav.css";
+import "./LeftSidebar.scss";
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useModal } from "../../ModalContext"; // Import modal context
+import GamenewsLogo from "../../assets/gamenews-logo.svg";
+import { navItems } from "./navItems";
 
 const LeftSidebar = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { showModal } = useModal(); // Access modal functionality
+    const { showModal, hideModal, activeModal } = useModal(); // Include activeModal from context
     const [expanded, setExpanded] = useState(true);
 
     useEffect(() => {
@@ -18,28 +19,35 @@ const LeftSidebar = () => {
             setExpanded(window.innerWidth > 1200);
         };
 
-        window.addEventListener('resize', handleResize);
+        window.addEventListener("resize", handleResize);
         handleResize();
 
-        return () => window.removeEventListener('resize', handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
-
-    const handleToggle = (isExpanded) => {
-        setExpanded(isExpanded);
-    };
 
     const handleClick = (item) => {
         if (item.modal) {
-            showModal(item.eventKey); // Open the modal for modal-enabled items
+            // Toggle modal: close if already active
+            if (activeModal === item.eventKey) {
+                hideModal();
+            } else {
+                showModal(item.eventKey);
+            }
         } else {
-            navigate(item.eventKey); // Navigate for regular items
+            hideModal(); // Close the modal for regular links
+            navigate(item.eventKey); // Navigate to the selected page
         }
+    };
+
+    const handleLogoClick = () => {
+        hideModal(); // Close the modal when clicking the logo
+        navigate("/"); // Navigate to the home page
     };
 
     return (
         <SideNav
             expanded={expanded}
-            onToggle={handleToggle}
+            onToggle={(isExpanded) => setExpanded(isExpanded)}
             className="custom-sidenav"
             onSelect={(selected) => {
                 if (location.pathname !== selected) navigate(selected);
@@ -49,8 +57,8 @@ const LeftSidebar = () => {
                 <SideNav.Nav selected={location.pathname}>
                     <div
                         className="logo"
-                        onClick={() => navigate('/')}
-                        style={{ cursor: 'pointer' }}
+                        onClick={handleLogoClick} // Close modal and navigate
+                        style={{ cursor: "pointer" }}
                     >
                         <img src={GamenewsLogo} alt="Game News Logo" />
                     </div>
@@ -58,7 +66,7 @@ const LeftSidebar = () => {
                         <NavItem
                             key={item.eventKey}
                             eventKey={item.eventKey}
-                            onClick={() => handleClick(item)} // Updated to use handleClick
+                            onClick={() => handleClick(item)} // Updated to toggle modal
                             className="nav-link"
                         >
                             <NavIcon>
