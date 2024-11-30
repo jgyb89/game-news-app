@@ -1,0 +1,127 @@
+@use "../../styles/variables";
+@use "../../styles/globals";
+
+.page-container{
+    margin-top: 150px; 
+  }
+
+.news-slider {
+    display: flex;
+    position: relative;
+    margin-left: 255px;
+  
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      scroll-behavior: smooth;
+      width: 100%;
+      gap: 20px;
+  
+      .news-box {
+        margin: 10px;
+        min-width: 300px; // Card width
+        border-right: 1px solid #fff;
+      }
+    }
+  
+    .control-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #000;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      color: #fff;
+  
+      &.control-prev-btn {
+        left: 10px;
+        z-index: 100;
+        opacity: 70%;
+      }
+  
+      &.control-prev-btn:hover {
+        opacity: 100%;
+        background-color: variables.$primary-color;
+      }
+  
+      &.control-next-btn {
+        right: 10px;
+        z-index: 100;
+        opacity: 70%;
+      }
+  
+      &.control-next-btn:hover {
+        opacity: 100%;
+        background-color: variables.$primary-color;
+      }
+  
+      &.hidden {
+        visibility: hidden;
+      }
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .news-slider {
+      margin-left: 75px;
+  
+      .carousel {
+        width: 100%;
+      }
+
+      .page-container{
+        margin-top: 150px; 
+      }
+  
+      .control-btn {
+        &.control-prev-btn {
+          left: 15px;
+        }
+  
+        &.control-next-btn {
+          right: 15px;
+        }
+  
+        &.hidden {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .news-slider {
+      margin-left: 0px;
+      margin-top: 20px;
+  
+      .carousel {
+        .news-box {
+          min-width: 250px; // Adjust for smaller screens
+          border-right: none;
+        }
+      }
+  
+      .control-btn {
+        &.control-prev-btn {
+          left: 15px;
+        }
+  
+        &.control-next-btn {
+          right: 15px;
+        }
+  
+        &.hidden {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  
+  

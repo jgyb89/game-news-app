@@ -2,19 +2,19 @@
 @use "../../styles/globals";
 
 .news-box {
-  .news-card {
-    width: 100%;
-    max-width: 300px;
-    margin: 0;
-  
+  width: 100%;
 
-  .news-img {
-    width: 100%;
-    max-width: 300px;
+    .news-card {
+      width: 100%;
+      max-width: 300px;
+      margin: 0;
+    
+    .news-img {
+      width: 100%;
+      height: auto;
+      max-width: 300px;
+    }
   }
-
-  
-}
 }
 
 .news-list {
@@ -40,11 +40,12 @@
 @media (max-width: 750px){
   .news-list {
     display: block;
-  margin-left: 0;
+    margin: auto;
+    
 
   .news-box {
     width: 100%;
-    
+    margin: auto;
   
     .news-img {
       width: 100%;
