@@ -33,7 +33,7 @@ const TopSlider = ({ defaultImages = [], altTexts = [] }) => {
 
   return (
     <div className="slider">
-      <p className="slider-title">Recommended for you</p>
+      <p className="slider-title">Top News</p>
     <div className="wrapper">
       
       <button

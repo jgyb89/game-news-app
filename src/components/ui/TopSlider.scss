@@ -7,6 +7,7 @@
   margin-top: 0;
   padding: 0;
   z-index: 10;
+  margin-bottom: 50px;
 }
 
 .slider-title{
@@ -20,6 +21,7 @@
   margin-bottom: 0px;
 
 }
+
 
 .wrapper {
   display: flex;
@@ -99,7 +101,6 @@
   .wrapper {
     margin-left: 64px;
     margin-right: 0;
-
     
 
     .carousel {
@@ -131,6 +132,7 @@
   .slider-title{
     margin-left: 10px;
     font-size: 12px;
+    margin-top: 50px;
   }
 
   .wrapper {

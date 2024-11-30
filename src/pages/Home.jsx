@@ -7,7 +7,7 @@ import TopNewsList from "../features/top_news/TopNewsList";
 
 export const Home = () => {
   return (
-    <div>
+    <div className="top-news-home">
       <TopSlider defaultImages={sliderImages} className='slider-home'/>
       
       <div className="main-container">

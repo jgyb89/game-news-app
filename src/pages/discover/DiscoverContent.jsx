@@ -12,8 +12,8 @@ const DiscoverContent = ({ image, title }) => {
     <div className="discover-content">
     <Card>
       <CardBody className="discover-card">
-      <CardImg top src={image} alt={title} className="discover-image" />
-   
+      <CardImg top src={image} alt={title} className="title" />
+    
       </CardBody>
     </Card>
     </div>

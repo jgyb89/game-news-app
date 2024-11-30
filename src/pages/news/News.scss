@@ -1,0 +1,58 @@
+@use "../../styles/variables";
+@use "../../styles/globals";
+
+.news-box {
+  .news-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0;
+  
+
+  .news-img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  
+}
+}
+
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 250px;
+  gap: 20px;
+}
+
+.error-message {
+  text-align: center;
+  color: red;
+  font-size: 18px;
+}
+
+@media (max-width: 1200px){
+  .news-list {
+      margin-left: 75px;
+  }
+  
+}
+
+@media (max-width: 750px){
+  .news-list {
+    display: block;
+  margin-left: 0;
+
+  .news-box {
+    width: 100%;
+    
+  
+    .news-img {
+      width: 100%;
+      
+    }
+  
+    
+  }
+  }
+  
+}
