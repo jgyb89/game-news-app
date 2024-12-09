@@ -18,6 +18,14 @@ const postsData = [
       username: 'user2',
       description: 'Another description for the second post.',
     },
+    {
+      id: 2,
+      profile: '../../assets/profile.cat.webp',
+      image: 'https://via.placeholder.com/400',
+      title: 'Sample Post 2',
+      username: 'user2',
+      description: 'Another description for the second post.',
+    },
     
   ];
   

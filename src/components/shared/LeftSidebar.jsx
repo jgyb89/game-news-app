@@ -34,13 +34,13 @@ const LeftSidebar = () => {
                 showModal(item.eventKey);
             }
         } else {
-            hideModal(); // Close the modal for regular links
+            hideModal(); // Close modal for regular links
             navigate(item.eventKey); // Navigate to the selected page
         }
     };
 
     const handleLogoClick = () => {
-        hideModal(); // Close the modal when clicking the logo
+        hideModal(); // Close modal when clicking the logo
         navigate("/"); // Navigate to the home page
     };
 
